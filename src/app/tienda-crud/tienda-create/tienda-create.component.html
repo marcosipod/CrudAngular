@@ -1,0 +1,38 @@
+<div class="container register">
+  <div class="row">
+
+    <div class="col-md-12 register-right">
+
+      <div class="row register-form">
+        <div class="col-md-12">
+          <form class="form-horizontal" #f="ngForm" novalidate (ngSubmit)="f.form.valid && onSubmit()">
+            <div class="form-group">
+              <input type="text" class="form-control" #firstNamevalid="ngModel" required name="nombre" [(ngModel)]="nombre"
+                placeholder="Nombre de la Tienda *" value="" />
+                <div *ngIf="nombrevalid.errors && (nombrevalid.dirty || nombrevalid.touched)">
+                  <p  class="text-danger" *ngIf="firstNamevalid.errors.required">Nombre de la Tienda</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+              <input type="text" class="form-control"  name="direccion" [(ngModel)]="direccion" placeholder="Dirección"
+                value="" />
+            </div>
+              <div class="form-group">
+              <input type="text" class="form-control"  name="telefono" [(ngModel)]="telefono" placeholder="Telefono"
+                value="" />
+            </div>
+         
+            <input type="submit" class="btn btn-success" value="Guardar" />
+          </form>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+</div>

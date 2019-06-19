@@ -1,0 +1,24 @@
+<div class="row">
+  <ul *ngFor="let emp of emps">
+
+ 
+     <a class="btn btn-success btn-sm" routerLink='/producto-create'> <i class="fa fa-plus"></i>Nuevo Producto</a>
+    
+  <div class="card col-sm">
+      <div class="card-body">
+        <h4 class="card-title"> <strong>Nombre:</strong>{{emp.nombre}} </h4>
+        <p class="card-text"> <strong>Precio: </strong>{{emp.precio}} </p>
+        <p class="card-text"> <strong>Cantidad: </strong>{{emp.cantidad}}</p>
+        <p class="card-text"> <strong>Proveedor: </strong>{{emp.proveedor}}</p>
+
+        <a [routerLink]="['/producto-edit', emp.id]" class="btn btn-primary">Editar</a>
+        <button (click)="deleteProducto(emp.id)" class="btn btn-danger">Borrar</button>
+      </div>
+    </div>
+
+
+
+
+
+  </ul>
+</div>

@@ -1,0 +1,19 @@
+<div class="row">
+  <ul *ngFor="let emp of emps">
+
+
+    <div class="card col-sm">
+      <div class="card-body">
+        <h4 class="card-title"> <strong>Almacen:</strong>{{emp.firstName}}</h4>
+       
+        <a [routerLink]="['/employee-edit', emp.id]" class="btn btn-primary">Edit</a>
+        <button (click)="deleteEmployee(emp.id)" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+
+
+
+
+
+  </ul>
+</div>
